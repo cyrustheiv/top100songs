@@ -4,28 +4,38 @@
   "description": "Joseph Cyrus Ampersand Exercise",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development"
+    "dev": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://ampersand-wlkhve@git.codesubmit.io/ampersand/top-100-albums-wlkhve"
+    "url": "https://github.com/cyrustheiv/top100songs"
   },
   "author": "Joseph Cyrus",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "vuex": "^3.5.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
+    "fibers": "^5.0.0",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
-    "rimraf": "^3.0.2",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "reset-css": "^5.0.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
   }
 }

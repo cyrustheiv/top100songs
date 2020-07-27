@@ -1,0 +1,109 @@
+/* BLOCK */
+.song {
+    background-color: $col-product-background;
+    padding: 10px;
+
+    /* ELEMENTS */
+    &__title {
+        height: 34px;
+        overflow: hidden;
+        line-height: 1em;
+        max-height: 2em;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    &__price {
+        text-align: right;
+    }
+
+    &__details,
+    &__artist {
+        float: left;
+    }
+
+    &__artist,
+    &__price {
+        padding-top: 3px;
+    }
+
+    &__details,
+    &__info-group-single {
+        width: 100%;
+    }
+
+    &__details {
+        display: block;
+    }
+
+    &__info-group-single {
+        display: inline-flex;
+    }
+
+    &__img {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    &__label-header {
+        text-align: center;
+        color: $col-product-sold-out;
+        cursor: pointer;
+    }
+
+    &__detail-label,
+    &__artist,
+    &__price {
+        font-weight: bold;
+    }
+
+    &__detail {
+        &-label {
+            padding-right: 5px;
+            text-transform: capitalize;
+        }
+    }
+
+    /* MODIFIERS */
+    &--sold-out {
+        color: $col-product-sold-out;
+        text-decoration: line-through;
+    }
+
+    &--default {
+        height: 300px;
+        background-color: $col-black;
+        opacity: .5;
+    }
+
+    &--default-title,
+    &--default-figure {
+        background-color: $col-black-light;
+    }
+
+    &--default-title {
+        height: 30px;
+    }
+
+    &--default-figure {
+        margin-top: 10px;
+        height: 80%;
+        width: 100%;
+    }
+
+    &__label-hidden + &__info-group {
+        visibility: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: .5s ease-out;
+        overflow: hidden;
+    }
+
+    &__label-open + &__info-group {
+        opacity: 1;
+        max-height: 400px;
+        transition: .5s ease-in;
+    }
+
+}

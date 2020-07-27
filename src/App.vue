@@ -1,23 +1,38 @@
 <template>
     <div id="app">
-        {{ message }}
+        <main>
+            <HeaderComponent/>
+            <FilterComponent/>
+            <ResultsComponent/>
+        </main>
+        <footer>
+            <h5 class="copyright">&copy; {{ copyright }}</h5>
+        </footer>
     </div>
 </template>
 
 <script>
+    import HeaderComponent from './components/HeaderComponent.vue'
+    import FilterComponent from './components/FilterComponent.vue'
+    import ResultsComponent from './components/ResultsComponent.vue'
+
     export default {
         data() {
             return {
-                message: 'Hello world',
+                copyright: 'Joseph Cyrus 2020'
             };
+        },
+        components: {
+            HeaderComponent,
+            FilterComponent,
+            ResultsComponent
+        },
+        beforeCreate() {
+            this.$store.dispatch('getAllSongData', 100);
         },
     };
 </script>
 
-<style>
-    #app {
-        font-size: 18px;
-        font-family: 'Roboto', sans-serif;
-        color: black;
-    }
+<style lang="scss">
+    @import "./stylesheets/app.scss";
 </style>

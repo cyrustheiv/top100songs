@@ -1,0 +1,52 @@
+/* BLOCK */
+.filter {
+    /* ELEMENTS */
+    &__input-group {
+        margin: 15px auto;
+        max-width: 375px;
+        text-align: center; 
+        display: flex; 
+    }
+
+    &__input-text,
+    &__select-item {
+        color: white;
+    }
+
+    &__input-text {
+        height: 15px;
+    }
+
+    &__select-item,
+    &__input-text {
+        width: 100%;
+        background-color: $app-background;
+    }
+}
+
+.result {
+    margin: 30px;
+
+    &__group {
+        margin: -18px auto 0px auto;
+        display: grid;
+        justify-items: center;
+
+        &-count {
+            line-height: inherit;
+            color: white;
+            text-align: center;
+            padding: 0 10px;
+            background: $app-background;
+            width: 80px;
+        }
+
+        &-info {
+            color: white;
+        }
+    }
+
+    &__hr {
+        border: 1px solid $col-black;
+    }
+}

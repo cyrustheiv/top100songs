@@ -1,0 +1,35 @@
+#app {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+body {
+    background-image: url('./images/background.svg');
+    background-size: 100%;
+    background-color: $app-background;
+    color: $col-black;
+}
+
+main {
+    padding: 0 30px 30px 30px;
+    @media(min-width: $br-desktop) {
+        padding: 0 50px 50px 50px;
+    }
+}
+
+input, 
+select,
+textarea,
+fieldset {
+    padding: 5px 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select {
+    height: 29px;
+    background-color: white;
+}

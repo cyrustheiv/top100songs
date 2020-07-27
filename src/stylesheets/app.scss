@@ -1,0 +1,26 @@
+@import "base/_reset.scss";
+@import "helpers/_variables.scss";
+@import "base/_typography.scss";
+@import "base/_grid.scss";
+@import "base/_base.scss";
+@import "modules/_filter.scss";
+@import "modules/_header.scss";
+@import "modules/_footer.scss";
+@import "modules/_song.scss";
+
+/* MODIFIERS */
+.border--solid {
+    border: 0px solid $col-black;
+}
+.border--top-bottom {
+    border-top: 2px solid $col-black;
+    border-right: 0px;
+    border-bottom: 2px solid $col-black;
+    border-left: 0px;
+}
+.border--radius-0 {
+    border-radius: 0;
+}
+.box--shadow {
+    box-shadow: 0 0 10px $col-black;
+}

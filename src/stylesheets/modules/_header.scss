@@ -1,0 +1,18 @@
+.header {
+    &,
+    &__title,
+    &__hero {
+        display: block;
+    }
+
+    &__title {
+        color: white;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__hero {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+}

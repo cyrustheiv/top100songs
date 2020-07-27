@@ -1,0 +1,86 @@
+// Grid block
+.grid {
+    display: grid;
+    gap: 1em;
+    margin-bottom: 20px;
+
+    // Grid 1 col modifier
+    &--1-col {
+        grid-template-columns: repeat(1, 1fr);
+
+        &__center {
+            align-items: center;
+            justify-items: center;
+        }
+
+        &__center * {
+            max-width: 260px;
+        }
+    }
+
+    // Grid 2 col modifier
+    &--2-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // Grid 4 col modifier
+    &--4-col {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, minmax(20px, 1fr));
+    }
+
+    // Grid 5 col modifier
+    &--5-col {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, minmax(20px, 1fr));
+    }
+
+    // Tablet state
+    @media(min-width: $br-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+
+        // Grid 1 col modifier
+        &--1-col {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, minmax(1px, 1fr));
+        }
+
+        // Grid 4 col modifier
+        &--4-col {
+            grid-template-rows: repeat(2, minmax(20px, 1fr));
+        }
+    }
+
+    // Desktop state
+    @media(min-width: $br-desktop) {
+        // Grid 2 col modifier
+        &--2-col {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        // Grid 3 col modifier
+        &--3-col {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        // Grid 4 col modifier
+        &--4-col {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, minmax(20px, 1fr));
+        }
+
+        // Grid 4 col modifier
+        &--5-col {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(1, minmax(20px, 1fr));
+        }
+    }
+
+    // Desktop Large state
+    @media(min-width: $br-desktop-lg) {
+        // Grid 2 col modifier
+        &--2-col {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
